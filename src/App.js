@@ -11,8 +11,16 @@ function App() {
   return (
     <div className="App">
       {/*<StartPage/>*/}
+      <header>
+        <p>Jordan McGalliard</p>
+        <p>GitHub</p>
+        <p>Image Source</p>
+      </header>
       <GamePage/>
+
+
     </div>
+
   );
 }
 
