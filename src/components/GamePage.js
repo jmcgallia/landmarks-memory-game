@@ -55,6 +55,12 @@ function GamePage(props) {
   // numPicked represents how many cards that have been picked should be returned
   // numUnpicked is how many cards that haven't been picked should be returned and displayed
   const chooseCards = (shuffledCards, numPicked, numUnpicked) => {
+
+    console.log(shuffledCards);
+    console.log("round", round);
+    console.log("numPicked", numPicked);
+    console.log("numUnpicked", numUnpicked);
+
     let newCards = [];
     for (let cardIndex = 0; (numPicked > 0 || numUnpicked > 0); cardIndex++) {
       if ((shuffledCards[cardIndex].picked === true) && (numPicked > 0)) {
@@ -81,12 +87,17 @@ function GamePage(props) {
     
 
     if (round === 0) {
-
       return (toJSX(chooseCards(cards, 0, 4))); 
-    } else if (0 < round < 5) {
+    } else if (round > 0 && round < 5) {
+      console.log("0 < round < 5");
       setCardsToPrint(toJSX(chooseCards(cards, 1, 3)));      
-    } else if (5 <= round <= 12) {
-      setCardsToPrint(toJSX(chooseCards(cards, 4, 1))); 
+    } else if (round >= 5 && round < 12) {
+      console.log("5 <= round <= 12")
+      setCardsToPrint(toJSX(chooseCards(cards, 3, 1))); 
+    } else if (round === 12) {
+      alert("You won!")
+      resetCards();
+      setRound(0);
     }
 
     
@@ -108,9 +119,26 @@ function GamePage(props) {
       }
     })
 
-    setCards(updatedCards);
-  
-    
+    setCards(updatedCards); 
+  }
+
+  // Check if card has been picked
+  function checkPicked(card) {
+    return (cards.find((element) => {
+      if (element.name === card && element.picked === true) {
+        return true;
+      }
+      
+    }))
+  }
+
+  // Resets all cards to unpicked to restart the game when player loses
+  function resetCards() {
+    let tempCards = cards.map((element) => {
+      element.picked = false;
+      return element;
+    })
+    setCards(tempCards);
   }
 
 
@@ -118,8 +146,17 @@ function GamePage(props) {
   // And then apply the logic for rendering the next round
   function onCardClick(event) {  
     
-    pickCard(event.currentTarget.getAttribute("name"));
-    setRound((round) => round+1);
+    
+    if (checkPicked(event.currentTarget.getAttribute("name")) !== undefined) {
+      console.log("You lost loser!");
+      resetCards();
+      setRound(0)
+    } else {
+      pickCard(event.currentTarget.getAttribute("name"));
+      setRound((round) => round+1);
+    }
+
+
 
   }
 
@@ -142,7 +179,7 @@ function GamePage(props) {
       </div>
     );
   }
-  
+
   return (
     <div className="GamePage">
 
