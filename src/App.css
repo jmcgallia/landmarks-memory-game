@@ -2,108 +2,28 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-}
-/*
-#root {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-template-columns: 90vw;
-  grid-template-rows: 90vh;
-  justify-content: center;
-  align-content: center;
-
-}
-
-.App {
-  height: 100%;
-  width: 100%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  box-sizing: border-box;
-
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 1fr;
-
-}
-
-.GamePage {
-  height: 100%;
-  width: 100%;
-
-  display: grid;
-  grid-template-rows: 1fr 6fr 1fr;
-
-}
-
-.infoArea {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-
-
-}
-
-.cardArea {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-
-}
-
-.cardHolder {
-
-  box-sizing: border-box;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.cardHolder p {
-  text-align: center;
-
-}
-
-.instructionsArea {
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  
 }
 
 
-.Card {
-  display: grid;
-  grid-template-rows: 90% 10%;
-  gap: 5px;
-  padding: 10px;
-  border-style: solid;
-  border-color: navy;
-  border-width: 2px;
-  justify-items: center;
-
-
-  box-sizing: border-box;
+/* https://css-tricks.com/perfect-full-page-background-image/ */
+.backGroundImage.barcelona,
+.backGroundImage.tokyo { 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transition-duration: 1000ms;
+  transition-property: background;
 }
 
-.Card img {
-  width: 50%;
-
-  border-style: solid;
-  border-color: navy;
-  border-width: 2px;
-
+.barcelona {
+  background: url("./media/pictures/barcelona.jpg") no-repeat center center fixed; 
 }
 
-.Card p {
-  text-align: center;
+.tokyo {
+  background: url("./media/pictures/tokyo.jpg") no-repeat center center fixed;
 }
-
-*/
 
 #root {
   height: 100vh;
@@ -131,7 +51,7 @@
 
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr;
+  grid-template-columns: 600px;
   grid-template-rows: 1fr 510px 1fr;
   justify-items: center;
 
@@ -158,7 +78,9 @@
   display: grid;
   grid-template-columns: 600px;
   text-align: center;
+  align-items: center;
 }
+
 
 
 .Card {
@@ -170,12 +92,15 @@
   border-style: solid;
   border-color: black;
   border-width: 2px;
+  border-radius: 10px;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 200px 50px;
   justify-items: center;
   gap: 10px;
+
+  background-color: rgb(187, 187, 187, .6);
 }
 
 .Card img {
@@ -186,12 +111,60 @@
   border-width: 2px;
 }
 
+.Card:hover {
+  background-color: blueviolet;
+}
+
+
 header {
+  
+  width: 100vw;
   position: absolute;
-  top: 0;
-  padding: 5px;
+  top: 10px;
+  padding: 0px 30px;
+  height: 45px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   text-align: center;
+  justify-items: center;
+}
+
+header div {
+  width: 600px;
+  display: grid;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  gap: 25px;
+  grid-template-columns: 150px 150px 150px;
+  
+  
+}
+
+header p,
+.instructionsArea {
+  background-color: bisque;
+  padding: 5px;
+  height: 100%;
+  
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 10px;
+
+  background-color: rgba(235, 235, 235, 0.6);
+}
+
+button {
+  width: 183px;
+  height: 32px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: aqua;
 }

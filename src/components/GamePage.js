@@ -13,6 +13,7 @@ import statueOfLiberty from "../media/pictures/statue-of-liberty.jpg";
 import stBasils from "../media/pictures/st-basils-cathedral.jpg";
 import westminsterPalace from "../media/pictures/westminster-palace.jpg";
 
+
 import React, { useState, useEffect } from 'react';
 
 function GamePage(props) {
@@ -42,6 +43,10 @@ function GamePage(props) {
   // useEffect executes on first render and each time [round] state is updated
   // It runs getCards
   useEffect(() => {
+
+    let html = document.querySelector("html");
+    html.style.backgroundImage = "url(./media/pictures/pyramids.jpg) no-repeat center center fixed";
+
     if (round === 0) {
       setCardsToPrint(getCards());
     } else {
@@ -95,9 +100,8 @@ function GamePage(props) {
       console.log("5 <= round <= 12")
       setCardsToPrint(toJSX(chooseCards(cards, 3, 1))); 
     } else if (round === 12) {
-      alert("You won!")
       resetCards();
-      setRound(0);
+      //setRound(0); Will set round after player hits 'play again'
     }
 
     
@@ -141,6 +145,9 @@ function GamePage(props) {
     setCards(tempCards);
   }
 
+  function onPlayAgainClick() {
+    setRound(0);
+  }
 
   // When a card is clicked on, we mark picked: true on that card
   // And then apply the logic for rendering the next round
@@ -183,14 +190,16 @@ function GamePage(props) {
   return (
     <div className="GamePage">
 
+
+
       <div className="infoArea">
-        <ScoreDisplay score={round}/>
+        <ScoreDisplay score={round} onPlayAgain={onPlayAgainClick}/>
       </div>
         
       {cardsToPrint}
 
       <div className="instructionsArea">
-        Choose all 12 landmarks without choosing the same one more than once.
+        <p>Choose all 12 landmarks without choosing the same one more than once.</p>
       </div>
 
     </div>
