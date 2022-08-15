@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/landmarks-memory-game/static/css/main.5ab50a49.css",
+    "main.js": "/landmarks-memory-game/static/js/main.e96445bf.js",
+    "static/media/tokyo.jpg": "/landmarks-memory-game/static/media/tokyo.911f1916ad2b55f22253.jpg",
+    "static/media/newyork.jpg": "/landmarks-memory-game/static/media/newyork.4a8c5459dfa9b22ccdf9.jpg",
+    "static/media/spain.jpg": "/landmarks-memory-game/static/media/spain.4d0289bbee362e3527d0.jpg",
+    "static/media/vietnam.jpg": "/landmarks-memory-game/static/media/vietnam.c403349ccadcd12c083f.jpg",
+    "static/media/sea.jpg": "/landmarks-memory-game/static/media/sea.529a949d01935a5509d0.jpg",
+    "static/media/utah.jpg": "/landmarks-memory-game/static/media/utah.1bcdd413ef845b572fcc.jpg",
+    "static/media/iran.jpg": "/landmarks-memory-game/static/media/iran.ecd59d8e6e607d132ba7.jpg",
+    "static/media/istanbul.jpg": "/landmarks-memory-game/static/media/istanbul.e662c474425f4dff76ae.jpg",
+    "static/media/machu-pichu.jpg": "/landmarks-memory-game/static/media/machu-pichu.21f51fc2f4ae9608e04e.jpg",
+    "static/media/st-basils-cathedral.jpg": "/landmarks-memory-game/static/media/st-basils-cathedral.1829d2f629a600607b1e.jpg",
+    "static/media/grand-canyon.jpg": "/landmarks-memory-game/static/media/grand-canyon.30411f49c27330aa14c2.jpg",
+    "static/media/mount-fuji.jpg": "/landmarks-memory-game/static/media/mount-fuji.a0871c453d296dd165e2.jpg",
+    "static/media/eiffel-tower.jpg": "/landmarks-memory-game/static/media/eiffel-tower.96b98cf6c3746c38760a.jpg",
+    "static/media/colloseum.jpg": "/landmarks-memory-game/static/media/colloseum.2b72f33ab2ca0e4d8100.jpg",
+    "static/media/pyramids.jpg": "/landmarks-memory-game/static/media/pyramids.fe8afcb6cae6e2debbcf.jpg",
+    "static/media/westminster-palace.jpg": "/landmarks-memory-game/static/media/westminster-palace.f6a9a48720c7c0703971.jpg",
+    "static/media/leaning-tower.jpg": "/landmarks-memory-game/static/media/leaning-tower.98983badbc8f34d88304.jpg",
+    "static/media/golden-gate-bridge.jpg": "/landmarks-memory-game/static/media/golden-gate-bridge.8f76ef85e2c9cf63760e.jpg",
+    "static/media/statue-of-liberty.jpg": "/landmarks-memory-game/static/media/statue-of-liberty.543089db40143e6ea8bf.jpg",
+    "static/media/taipei-101.jpg": "/landmarks-memory-game/static/media/taipei-101.5685776d8a2c86ac9417.jpg",
+    "index.html": "/landmarks-memory-game/index.html",
+    "main.5ab50a49.css.map": "/landmarks-memory-game/static/css/main.5ab50a49.css.map",
+    "main.e96445bf.js.map": "/landmarks-memory-game/static/js/main.e96445bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ab50a49.css",
+    "static/js/main.e96445bf.js"
+  ]
+}
