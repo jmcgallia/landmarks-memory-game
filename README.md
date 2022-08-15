@@ -6,6 +6,9 @@ This project was created in order to practice the react framework
 
 You can access the live version [here](https://jordan-mcgalliard.github.io/landmarks-memory-game/)
 
+## Known issues
+- I resized the images to a resolution that looks okay on a decently sized monitor, but this size is still too big and the transitions can look choppy. I assume with a worse internet connection there would be more problems. Solution: Find a way to load all images before the app begins?
+
 ## Features
 
 - A classic memory game
