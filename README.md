@@ -4,7 +4,7 @@ This project was created in order to practice the react framework
 
 ## Live Version
 
-You can access the live version [here.] (http://Google.com)
+You can access the live version [here](https://jordan-mcgalliard.github.io/landmarks-memory-game/)
 
 ## Features
 
