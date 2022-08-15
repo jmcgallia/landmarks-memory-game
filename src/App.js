@@ -6,8 +6,8 @@ import GamePage from './components/GamePage';
 
 function App() {
 
-  const [displayStartPage, toggleDisplayStartPage] = useState("block");
-  const [displayGamePage, toggleDisplayGamePage] = useState("none");
+  // Save names of CSS classes to go through for the background
+  // They are just defined on first render since it is w/ useState()
   const [imageClasses, setImageClasses] = useState([
     "iran",
     "istanbul",
@@ -21,14 +21,18 @@ function App() {
 
 
   let html = document.querySelector("html");
+  // "backGroundImage" class has stuff for the changing backgrounds
   html.classList.add("backGroundImage");
   
-
+  // useEffect() only has [] as its 2nd arg, which means it just runs on first render
+  // We set up the background slider and set the interval timer for it here
   useEffect(() => {
 
     let currentBackGround = "iran";
-    html.classList.add("iran")
-    let imageIndex = 0;
+    let imageIndex = Math.floor(Math.random() * 7);
+    html.classList.add(imageClasses[imageIndex]);
+
+    
 
     const interval = setInterval(() => {
 
@@ -50,6 +54,8 @@ function App() {
 
       }, 8000)
   }, [])
+
+  // Render the app. I decided not to have a startpage, it seems redundant
 
   return (
     <div className="App">

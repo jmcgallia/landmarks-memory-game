@@ -20,3 +20,9 @@ You can access the live version [here.] (http://Google.com)
 - Git & Github
 - HTML
 - CSS
+
+## Things I learned
+- Got to practice practice & reinforce skills w/ the technology used
+- Test every function you write from the beginning, a lot. Otherwise when something doesn't work it will take forever to even understand where the problem is even coming from.
+- Became aware of some frustrating effects of state changes being asynchronous, which can cause bugs if you're not careful how you write your code.
+

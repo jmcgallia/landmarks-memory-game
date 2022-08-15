@@ -37,7 +37,6 @@ function GamePage(props) {
     ]);
 
   const [cardsToPrint, setCardsToPrint] = useState(0);
-  // const [cardsToPrint, setCardsToPrint] = useState(getCards()); causes a double render. Why?
   let [round, setRound] = useState(0);
 
   // useEffect executes on first render and each time [round] state is updated
@@ -191,6 +190,10 @@ function GamePage(props) {
     <div className="GamePage">
 
 
+      {/* The ScoreDisplay component isn't super necessary, 
+      I made it when I was trying to figure out why something
+      didn't work to see if that was the problem. I guess it is a design
+      question what should or shouldn't be a component anyways? */}
 
       <div className="infoArea">
         <ScoreDisplay score={round} onPlayAgain={onPlayAgainClick}/>
