@@ -8,7 +8,16 @@ function App() {
 
   const [displayStartPage, toggleDisplayStartPage] = useState("block");
   const [displayGamePage, toggleDisplayGamePage] = useState("none");
-
+  const [imageClasses, setImageClasses] = useState([
+    "iran",
+    "istanbul",
+    "newyork",
+    "sea",
+    "spain",
+    "tokyo",
+    "utah",
+    "vietnam"
+  ])
 
 
   let html = document.querySelector("html");
@@ -17,24 +26,29 @@ function App() {
 
   useEffect(() => {
 
-    let currentBackGround = "barcelona";
-    html.classList.add("barcelona")
+    let currentBackGround = "iran";
+    html.classList.add("iran")
+    let imageIndex = 0;
 
     const interval = setInterval(() => {
-      if (currentBackGround === "barcelona") {
-        currentBackGround = "tokyo";
-        console.log("it happened barcelona")
-        html.classList.remove("barcelona");
-        html.classList.add("tokyo");
-        
-      } else {
-        currentBackGround = "barcelona"
-        console.log("It happened tokyo")
-        html.classList.remove("tokyo");
-        html.classList.add("barcelona")
+
+      currentBackGround = imageClasses[imageIndex];
+      html.classList.add(imageClasses[imageIndex])
       
-        }
-      }, 10000)
+      if (imageIndex !== 7 && imageIndex !== 0) {
+        html.classList.remove(imageClasses[imageIndex-1])
+        imageIndex += 1;
+      } else if (imageIndex === 7) {
+        html.classList.remove(imageClasses[imageIndex-1])
+        imageIndex = 0;
+      } else if (imageIndex === 0) {
+        html.classList.remove(imageClasses[7])
+        imageIndex += 1;
+      }
+
+
+
+      }, 8000)
   }, [])
 
   return (
