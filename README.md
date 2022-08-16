@@ -28,4 +28,4 @@ You can access the live version [here](https://jordan-mcgalliard.github.io/landm
 
 ## Known issues
 - I resized the images to a resolution that looks okay on a decently sized monitor, but this size is still too big and the transitions can look choppy. I assume with a worse internet connection there would be more problems. Solution: Find a way to load all images before the app begins?
-- - Has now been fixed by preloading images 
+  - Has now been much improved by preloading images. But I think it is better to focus on learning other things than finding the perfect solution for now.
