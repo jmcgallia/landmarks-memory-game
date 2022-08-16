@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landmarks-memory-game/static/css/main.5ab50a49.css",
-    "main.js": "/landmarks-memory-game/static/js/main.f34b1c21.js",
+    "main.css": "/landmarks-memory-game/static/css/main.3d378dc6.css",
+    "main.js": "/landmarks-memory-game/static/js/main.88881039.js",
     "static/media/tokyo.jpg": "/landmarks-memory-game/static/media/tokyo.911f1916ad2b55f22253.jpg",
     "static/media/newyork.jpg": "/landmarks-memory-game/static/media/newyork.4a8c5459dfa9b22ccdf9.jpg",
     "static/media/spain.jpg": "/landmarks-memory-game/static/media/spain.4d0289bbee362e3527d0.jpg",
@@ -23,11 +23,11 @@
     "static/media/statue-of-liberty.jpg": "/landmarks-memory-game/static/media/statue-of-liberty.543089db40143e6ea8bf.jpg",
     "static/media/taipei-101.jpg": "/landmarks-memory-game/static/media/taipei-101.5685776d8a2c86ac9417.jpg",
     "index.html": "/landmarks-memory-game/index.html",
-    "main.5ab50a49.css.map": "/landmarks-memory-game/static/css/main.5ab50a49.css.map",
-    "main.f34b1c21.js.map": "/landmarks-memory-game/static/js/main.f34b1c21.js.map"
+    "main.3d378dc6.css.map": "/landmarks-memory-game/static/css/main.3d378dc6.css.map",
+    "main.88881039.js.map": "/landmarks-memory-game/static/js/main.88881039.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ab50a49.css",
-    "static/js/main.f34b1c21.js"
+    "static/css/main.3d378dc6.css",
+    "static/js/main.88881039.js"
   ]
 }
