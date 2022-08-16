@@ -28,6 +28,8 @@ function App() {
   // We set up the background slider and set the interval timer for it here
   useEffect(() => {
 
+    document.title = "Landmarks";
+
     let currentBackGround = "iran";
     let imageIndex = Math.floor(Math.random() * 7);
     html.classList.add(imageClasses[imageIndex]);
