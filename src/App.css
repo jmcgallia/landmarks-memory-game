@@ -247,3 +247,7 @@ button {
 button:hover {
   background-color: gray;
 }
+
+#preload {
+  display: none;
+}

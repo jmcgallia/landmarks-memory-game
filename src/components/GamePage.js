@@ -186,6 +186,11 @@ function GamePage(props) {
     );
   }
 
+    // Testing when things are rerendered to get a better understanding of React.
+    useEffect(() => {
+      console.log("GamePage (child of App) rerendered");
+    })
+
   return (
     <div className="GamePage">
 

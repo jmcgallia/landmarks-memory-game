@@ -57,13 +57,30 @@ function App() {
       }, 8000)
   }, [])
 
+  // Testing when things are rerendered to get a better understanding of React.
+  useEffect(() => {
+    console.log("App rerendered");
+  })
+
   // Render the app. I decided not to have a startpage, it seems redundant
 
   return (
     <div className="App">
       {/*<StartPage/>*/}
      
-
+      {/* I can preload my background images here for better performance.
+      As the code is now, the App component doesn't rerender just children
+      so this is okay for now.*/}
+      <div id="preload">
+        <img src={require("../src/media/backgrounds/istanbul.jpg")}/>
+        <img src={require("../src/media/backgrounds/iran.jpg")}/>
+        <img src={require("../src/media/backgrounds/sea.jpg")}/>
+        <img src={require("../src/media/backgrounds/tokyo.jpg")}/>
+        <img src={require("../src/media/backgrounds/spain.jpg")}/>
+        <img src={require("../src/media/backgrounds/utah.jpg")}/>
+        <img src={require("../src/media/backgrounds/newyork.jpg")}/>
+        <img src={require("../src/media/backgrounds/utah.jpg")}/>
+      </div>
 
       <header>
         <div>
